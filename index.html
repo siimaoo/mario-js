@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Mario feito com css</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- 12x16 -->
+    <main>
+      <div class="container">
+        <div class="grid"></div>
+      </div>
+    </main>
+    <script src="js/drawRowFunctions.js"></script>
+    <script>
+      var rows = "";
+      document.addEventListener("DOMContentLoaded", function() {
+        createAllRows();
+      });
+      function createAllRows() {
+        for (let i = 0; i < 16; i++) {
+          rows = `<div class='row row-${i + 1}'>`;
+          for (let i = 0; i < 12; i++) {
+            rows += `<div class='col col-${i + 1}'>`;
+            rows += "</div>";
+          }
+          rows += "</div>";
+          document.querySelector(".grid").innerHTML += rows;
+        }
+        drawRow();
+      }
+
+      function drawRow() {
+        for(let i=0; i < 17; i++) {
+          for (let j=0; j<12; j++) {
+            if (i == 1) row1();
+            if (i == 2) row2();
+            if (i == 3) row3();
+            if (i == 4) row4();
+            if (i == 5) row5();
+            if (i == 6) row6();
+            if (i == 7) row7();
+            if (i == 8) row8();
+            if (i == 9) row9();
+            if (i == 10) row10();
+            if (i == 11) row11();
+            if (i == 12) row12();
+            if (i == 13) row13();
+            if (i == 14) row14();
+            if (i == 15) row15();
+            if (i == 16) row16();
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
